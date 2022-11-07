@@ -14,7 +14,7 @@ public class SQLiteDB : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CreateAlphabetTable();
+        //CreateAlphabetTable();
     }
      public void CreateAlphabetTable()
     {
