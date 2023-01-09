@@ -54,11 +54,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SQLiteDB.cs" />
+    <Compile Include="Assets\Scripts\PrefabsScripts\MainMenuDM_Prefab.cs" />
+    <Compile Include="Assets\Scripts\Manual_Prefab\FilteringSlot.cs" />
     <Compile Include="Assets\Scripts\BaseSlot.cs" />
-    <Compile Include="Assets\Scripts\InfoNPC.cs" />
+    <Compile Include="Assets\Scripts\HelperJSON.cs" />
     <Compile Include="Assets\Scripts\PlayerSlot.cs" />
     <Compile Include="Assets\Scripts\NpcSlot.cs" />
+    <Compile Include="Assets\Scripts\Manual_Prefab\Manual_Prefab.cs" />
     <Compile Include="Assets\Scripts\DnDInitiativeMenu.cs" />
+    <Compile Include="Assets\Scripts\Manual_Prefab\MenuFilteringManual.cs" />
+    <Compile Include="Assets\Scripts\Manual_Prefab\AnimationManagerManualPrefab.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\BasicMenu.cs" />
+    <Compile Include="Assets\Scripts\CreateBlockerGUI.cs" />
+    <Compile Include="Assets\Scripts\GraphicRaycasterRaycasterExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -304,11 +313,11 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.20f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.Data.Sqlite">
-      <HintPath>Assets\Plugins\Mono.Data.Sqlite.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Assets\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite">
+      <HintPath>Assets\Plugins\Mono.Data.Sqlite.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
