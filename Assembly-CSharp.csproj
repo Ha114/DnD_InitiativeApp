@@ -66,8 +66,8 @@
     <Compile Include="Assets\Scripts\Manual_Prefab\AnimationManagerManualPrefab.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\BasicMenu.cs" />
-    <Compile Include="Assets\Scripts\CreateBlockerGUI.cs" />
-    <Compile Include="Assets\Scripts\GraphicRaycasterRaycasterExample.cs" />
+    <Compile Include="Assets\Scripts\CreatureInfo\CreatureInfo.cs" />
+    <Compile Include="Assets\Scripts\CreatureInfo\ManualSlotPrefab.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

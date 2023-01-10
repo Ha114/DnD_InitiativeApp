@@ -140,7 +140,7 @@ public class MenuFilteringManual : Manual_Prefab
         }
     }
 
-    public void CheckFilterChallenge(string word)
+    public void CheckFilterChallenge(string word = "")
     {
         _inputOpenMetaChallange.transform.GetChild(1).GetComponent<Text>().text += word + " ";
         _inputOpenMetaChallange.text = "";
@@ -200,7 +200,10 @@ public class MenuFilteringManual : Manual_Prefab
     {
         originalChallengeInfoDictionary.Clear();
         CreateDictionaryByList(allChallengeManual);
-
+        foreach (Transform child in _parentSectionChallenge)
+        {
+            child.GetComponent<Image>().color = new Color(0.7075472f, 0.6367925f, 0.6367925f, 0.3568628f);
+        }
     }
     public void OnChangeInputFieldByName(InputField text)
     {

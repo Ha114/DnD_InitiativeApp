@@ -11,7 +11,7 @@ public class FilteringSlot : MonoBehaviour
     public void OnClickFindByType() => MenuFilteringManual.in2.SetManualDataByFilter(1, filtrName.text);
     public void OnClickFindBySize() => MenuFilteringManual.in2.SetManualDataByFilter(2, filtrName.text);
     public void OnClickFindByAlignment() => MenuFilteringManual.in2.SetManualDataByFilter(3, filtrName.text);
-    public void OnClickFindByChallenge1() => MenuFilteringManual.in2.SetManualDataByFilter(4, filtrName.text);
+    public void OnClickFindByChallenge() => MenuFilteringManual.in2.SetManualDataByFilter(4, filtrName.text);
 
 
     public void ChangeColorOnClick(Button button)

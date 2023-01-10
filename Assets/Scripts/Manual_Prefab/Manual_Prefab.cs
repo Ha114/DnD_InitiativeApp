@@ -28,9 +28,6 @@ public class Manual_Prefab : MonoBehaviour
         }
     }
 
-    
-
-
     public void InstantiateSlot(Transform parent, GameObject slot, string name)
     {
         GameObject newSlot = Instantiate(slot, parent.position, Quaternion.identity);
