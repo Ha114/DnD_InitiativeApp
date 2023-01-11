@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class MainMenuDM_Prefab : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public void OpenManualPrefabButton() => SceneManager.instanceSceneManager.OpenManualPrefab();
+    public void OpenRollInitiativePrefabButton() => SceneManager.instanceSceneManager.OpenRollInitiativePrefab();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

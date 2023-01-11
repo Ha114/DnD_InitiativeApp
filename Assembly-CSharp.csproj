@@ -53,21 +53,21 @@
     <UnityVersion>2020.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\SQLiteDB.cs" />
-    <Compile Include="Assets\Scripts\PrefabsScripts\MainMenuDM_Prefab.cs" />
     <Compile Include="Assets\Scripts\Manual_Prefab\FilteringSlot.cs" />
-    <Compile Include="Assets\Scripts\BaseSlot.cs" />
+    <Compile Include="Assets\Scripts\RollIniative_Prefab\BaseSlot.cs" />
     <Compile Include="Assets\Scripts\HelperJSON.cs" />
-    <Compile Include="Assets\Scripts\PlayerSlot.cs" />
-    <Compile Include="Assets\Scripts\NpcSlot.cs" />
+    <Compile Include="Assets\Scripts\RollIniative_Prefab\PlayerSlot.cs" />
+    <Compile Include="Assets\Scripts\RollIniative_Prefab\NpcSlot.cs" />
     <Compile Include="Assets\Scripts\Manual_Prefab\Manual_Prefab.cs" />
-    <Compile Include="Assets\Scripts\DnDInitiativeMenu.cs" />
+    <Compile Include="Assets\Scripts\RollIniative_Prefab\DnDInitiativeMenu.cs" />
     <Compile Include="Assets\Scripts\Manual_Prefab\MenuFilteringManual.cs" />
     <Compile Include="Assets\Scripts\CreatureInfo\ManualSlotPrefab.cs" />
     <Compile Include="Assets\Scripts\Manual_Prefab\AnimationManagerManualPrefab.cs" />
     <Compile Include="Assets\Scripts\CreatureInfo\CreatureInfo.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\BasicMenu.cs" />
+    <Compile Include="Assets\Scripts\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\PrefabsScripts\MainMenuDM_Prefab.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

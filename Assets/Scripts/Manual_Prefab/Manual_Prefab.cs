@@ -11,7 +11,6 @@ public class Manual_Prefab : MonoBehaviour
     [SerializeField] public GameObject _slotPrefabManual;
     private List<HelperJSONDataCreature> helperJSONData => instanceHelperJSON.helperJSONDatas;
 
-    // Start is called before the first frame update
     void Start()
     {
         SetCreaturesSlots();
@@ -35,6 +34,8 @@ public class Manual_Prefab : MonoBehaviour
         Text txt = newSlot.transform.GetChild(0).GetComponent<Text>();
         txt.text = name;
     }
+
+    public void BackToMainMenuButton() => SceneManager.instanceSceneManager.BackToMainMenu(1);
 
     public virtual void DestroyManualSlots()
     {

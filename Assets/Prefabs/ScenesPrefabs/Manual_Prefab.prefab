@@ -133,7 +133,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5295647051673932858}
         m_TargetAssemblyTypeName: BasicMenu, Assembly-CSharp
         m_MethodName: ShowObject
         m_Mode: 2
@@ -145,7 +145,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5295647051673932858}
         m_TargetAssemblyTypeName: BasicMenu, Assembly-CSharp
         m_MethodName: CloseObject
         m_Mode: 2
@@ -286,6 +286,8 @@ GameObject:
   - component: {fileID: 3325307920816142732}
   - component: {fileID: 3325307920816142733}
   - component: {fileID: 3325307920816142730}
+  - component: {fileID: 5295647051673932858}
+  - component: {fileID: 797304811657477105}
   m_Layer: 5
   m_Name: Manual_Prefab
   m_TagString: Untagged
@@ -345,6 +347,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentSectionManual: {fileID: 3325307920852838910}
   _slotPrefabManual: {fileID: 1639996064813356392, guid: 6b0a80604c708e344bcf8ec243893ed3, type: 3}
+--- !u!114 &5295647051673932858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325307920816142735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ece8f4b3be6df845ac7a2439da4c3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &797304811657477105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325307920816142735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e47d5b98b876d1459dae739e58e3d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentCreatureInfo: {fileID: 3325307922525646856}
+  _slotCreaturePrefab: {fileID: 2101319350802061522, guid: 1b2ead5ce1b887c4f84344b07f840e9d, type: 3}
 --- !u!1 &3325307920831234796
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,7 +689,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5295647051673932858}
+        m_TargetAssemblyTypeName: BasicMenu, Assembly-CSharp
+        m_MethodName: CloseObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3325307920682535821}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5295647051673932858}
         m_TargetAssemblyTypeName: BasicMenu, Assembly-CSharp
         m_MethodName: ShowObject
         m_Mode: 2
@@ -4435,24 +4475,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5295647051673932858}
         m_TargetAssemblyTypeName: BasicMenu, Assembly-CSharp
-        m_MethodName: ShowObject
+        m_MethodName: CloseObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3325307920682535821}
+          m_ObjectArgument: {fileID: 3325307922737330575}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5295647051673932858}
         m_TargetAssemblyTypeName: BasicMenu, Assembly-CSharp
-        m_MethodName: CloseObject
+        m_MethodName: ShowObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3325307922737330575}
+          m_ObjectArgument: {fileID: 3325307920682535821}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5038,9 +5078,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OpenMainMenuPrefab
+      - m_Target: {fileID: 3325307920816142730}
+        m_TargetAssemblyTypeName: Manual_Prefab, Assembly-CSharp
+        m_MethodName: BackToMainMenuButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6157,9 +6197,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b3c60897af919e4487e0d1f3c0956f6, type: 3}
---- !u!1 &2328415769804382813 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7017238955937884840, guid: 3b3c60897af919e4487e0d1f3c0956f6, type: 3}
+--- !u!224 &2328415768554794458 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7017238955759117615, guid: 3b3c60897af919e4487e0d1f3c0956f6, type: 3}
   m_PrefabInstance: {fileID: 4697831004938586357}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &7289461134183586904 stripped
@@ -6178,9 +6218,9 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7017238956292296007, guid: 3b3c60897af919e4487e0d1f3c0956f6, type: 3}
   m_PrefabInstance: {fileID: 4697831004938586357}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &2328415768554794458 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7017238955759117615, guid: 3b3c60897af919e4487e0d1f3c0956f6, type: 3}
+--- !u!1 &2328415769804382813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7017238955937884840, guid: 3b3c60897af919e4487e0d1f3c0956f6, type: 3}
   m_PrefabInstance: {fileID: 4697831004938586357}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5116488123812562625

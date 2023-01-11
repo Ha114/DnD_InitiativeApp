@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class ManualSlotPrefab : MonoBehaviour
 {
     [SerializeField] Text creatureName;
-
-    public void SetCreatureInfo() => GameManager.instanceGameManager.SetCreatureInfoGM(creatureName.text);
+    public void SetCreatureInfo() => GameManager.instanceGameManager.InstantiateSlotCreatureInfo(creatureName.text);
     
 }

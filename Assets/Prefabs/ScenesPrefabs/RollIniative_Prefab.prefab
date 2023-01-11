@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8379719892881843415}
   m_Layer: 0
-  m_Name: TestRollIniative_Ptefab
+  m_Name: RollIniative_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
