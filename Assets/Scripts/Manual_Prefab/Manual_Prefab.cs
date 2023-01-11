@@ -9,7 +9,7 @@ public class Manual_Prefab : MonoBehaviour
     [Header("   Manual List")]
     [SerializeField] public Transform _parentSectionManual;
     [SerializeField] public GameObject _slotPrefabManual;
-    private List<HelperJSONData> helperJSONData => instance.helperJSONDatas;
+    private List<HelperJSONDataCreature> helperJSONData => instanceHelperJSON.helperJSONDatas;
 
     // Start is called before the first frame update
     void Start()

@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class FilteringSlot : MonoBehaviour
 {
     [SerializeField] Text filtrName;
-    public void OnClickFindByName() => MenuFilteringManual.in2.SetManualDataByFilter(0, filtrName.text);
-    public void OnClickFindByType() => MenuFilteringManual.in2.SetManualDataByFilter(1, filtrName.text);
-    public void OnClickFindBySize() => MenuFilteringManual.in2.SetManualDataByFilter(2, filtrName.text);
-    public void OnClickFindByAlignment() => MenuFilteringManual.in2.SetManualDataByFilter(3, filtrName.text);
-    public void OnClickFindByChallenge() => MenuFilteringManual.in2.SetManualDataByFilter(4, filtrName.text);
+    public void OnClickFindByName() => MenuFilteringManual.instanceMenuFilteringManual.SetManualDataByFilter(0, filtrName.text);
+    public void OnClickFindByType() => MenuFilteringManual.instanceMenuFilteringManual.SetManualDataByFilter(1, filtrName.text);
+    public void OnClickFindBySize() => MenuFilteringManual.instanceMenuFilteringManual.SetManualDataByFilter(2, filtrName.text);
+    public void OnClickFindByAlignment() => MenuFilteringManual.instanceMenuFilteringManual.SetManualDataByFilter(3, filtrName.text);
+    public void OnClickFindByChallenge() => MenuFilteringManual.instanceMenuFilteringManual.SetManualDataByFilter(4, filtrName.text);
 
 
     public void ChangeColorOnClick(Button button)
@@ -22,12 +22,12 @@ public class FilteringSlot : MonoBehaviour
         if (color == new Color(0.5849f, 0.2615f, 0.5207f, 0.6666f) || textButton == "")
         {
             button.GetComponent<Image>().color = new Color(0.7075472f, 0.6367925f, 0.6367925f, 0.3568628f); //basic color
-            MenuFilteringManual.in2.RemoveChallengeRate(textButton);
+            MenuFilteringManual.instanceMenuFilteringManual.RemoveChallengeRate(textButton);
         }
         else
         {
             button.GetComponent<Image>().color = new Color(0.5849f, 0.2615f, 0.5207f, 0.6666f);
-            MenuFilteringManual.in2.CheckFilterChallenge(textButton);
+            MenuFilteringManual.instanceMenuFilteringManual.CheckFilterChallenge(textButton);
         }
     }
 }

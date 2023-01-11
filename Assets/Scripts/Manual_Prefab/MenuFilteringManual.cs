@@ -10,15 +10,16 @@ using static HelperJSON;
 public class MenuFilteringManual : Manual_Prefab
 {
     #region singleton
-    public static MenuFilteringManual in2;
+    public static MenuFilteringManual instanceMenuFilteringManual;
     private void Awake()
     {
-        if (in2 == null)
+        if (instanceMenuFilteringManual == null)
         {
-            in2 = this;
+            instanceMenuFilteringManual = this;
         }
     }
     #endregion
+
     [Header("   Search info")]
     [SerializeField] InputField _input;
     [Header("   Meta Type List")]
@@ -47,7 +48,9 @@ public class MenuFilteringManual : Manual_Prefab
     [SerializeField] GameObject _listOfMetaNames;
     [SerializeField] InputField _inputOpenMetaNames;
 
-    private List<HelperJSONData> helperJSONData => instance.helperJSONDatas;
+    [Header("   Text Accepted Filter")]
+    [SerializeField] Text acceptedFilter;
+    private List<HelperJSONDataCreature> helperJSONData => instanceHelperJSON.helperJSONDatas;
     private List<string> allTypeManual = new List<string>();
     private List<string> allSizeManual = new List<string>();
     private List<string> allAlignmentManual = new List<string>();
@@ -72,29 +75,44 @@ public class MenuFilteringManual : Manual_Prefab
             challengeLevel = SetDataFromInputField(InputOpenMetaChallenge);
         }
         private string SetDataFromInputField(InputField InputField) => InputField.gameObject.transform.GetChild(1).GetComponent<Text>().text;
-        public bool CheckIfContains(HelperJSONData helperJSONDatas)
+        public bool CheckIfContains(HelperJSONDataCreature helperJSONDatas)
         {
-            if (helperJSONDatas.meta.Contains(name) && helperJSONDatas.meta.Contains(metaType)
+            if (helperJSONDatas.name.Contains(name) && helperJSONDatas.meta.Contains(metaType)
                 && helperJSONDatas.meta.Contains(metaType) && helperJSONDatas.meta.Contains(metaSize)
                 && helperJSONDatas.meta.Contains(metaAlignments) && helperJSONDatas.meta.Contains(challengeLevel))
-                    return true;
+                return true;
 
             return false;
         }
+
+        public string GetAcceptedFilterData() => "Name: " + name + ";\nType: " + metaType + ";\nSize: " +
+            metaSize + ";\nAlignments: " + metaAlignments + ";\nChallenge: " + challengeLevel;
+        
     }
     SearchFilterData searchFilterData;
 
-    private void Start()
+    public void ClearFilter()
     {
+        ClearInfoText(_inputOpenMetaType); 
+        ClearInfoText(_inputOpenMetaSize);
+        ClearInfoText(_inputOpenMetaAlignment);
+        ClearInfoText(_inputOpenMetaChallange);
 
+        _inputOpenMetaNames.text = "";
+
+        void ClearInfoText(InputField InputField)
+        {
+            InputField.gameObject.transform.GetChild(1).GetComponent<Text>().text = "";
+            InputField.GetComponent<Image>().color = new Color(0.8f, 0.8f, 0.8f, 0.8f); //grey color
+        }
     }
-
     public void AcceptFiltr()
     {
         searchFilterData = new SearchFilterData();
-        DestroyManualSlots();      
+        DestroyManualSlots();
         searchFilterData.SetData(_input, _inputOpenMetaType, _inputOpenMetaSize, _inputOpenMetaAlignment, _inputOpenMetaChallange);
         int count = 0;
+
         for (int i = 0; i < helperJSONData.Count; i++)
         {
             if (searchFilterData.CheckIfContains(helperJSONData[i]))
@@ -103,7 +121,8 @@ public class MenuFilteringManual : Manual_Prefab
                 InstantiateSlot(_parentSectionManual, _slotPrefabManual, helperJSONData[i].name);
             }
         }
-        Debug.Log("count = " + count);
+
+        acceptedFilter.text = searchFilterData.GetAcceptedFilterData() + ";\nResults: " + count;
     }
     public void SetManualDataByFilter(int idSortType = 0, string word = "")
     {

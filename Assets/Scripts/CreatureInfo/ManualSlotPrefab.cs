@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +8,6 @@ public class ManualSlotPrefab : MonoBehaviour
 {
     [SerializeField] Text creatureName;
 
-    public void SetCreatureInfo()
-    {
-        Debug.Log("Name = " + creatureName.text);
-    }
+    public void SetCreatureInfo() => GameManager.instanceGameManager.SetCreatureInfoGM(creatureName.text);
+    
 }

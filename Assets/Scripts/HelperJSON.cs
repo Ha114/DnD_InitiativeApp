@@ -8,17 +8,17 @@ using UnityEngine;
 public class HelperJSON : MonoBehaviour
 {
     #region singleton
-    public static HelperJSON instance;
+    public static HelperJSON instanceHelperJSON;
     private void Awake()
     {
-        if (instance == null)
+        if (instanceHelperJSON == null)
         {
             LoadJson();
-            instance = this;
+            instanceHelperJSON = this;
         }
     }
     #endregion
-    public class HelperJSONData
+    public class HelperJSONDataCreature
     {
         //basic info
         public string name;
@@ -68,46 +68,31 @@ public class HelperJSON : MonoBehaviour
         //image if internet connection == true
         public string img_url;
     }
-    public List<HelperJSONData> helperJSONDatas;
+    public List<HelperJSONDataCreature> helperJSONDatas;
 
-    List<HelperJSONData> npcList;
+    List<HelperJSONDataCreature> npcList;
 
     public void LoadJson()
     {
         using (StreamReader r = new StreamReader("srd_5e_monsters.json"))
         {
             string json = r.ReadToEnd();
-            npcList = JsonConvert.DeserializeObject<List<HelperJSONData>>(json);
-           
+            npcList = JsonConvert.DeserializeObject<List<HelperJSONDataCreature>>(json);
             helperJSONDatas = npcList;
-            /*foreach(var npc in npcList)
-            {
-                Debug.Log("Name = " + npc.name);
-            }*/
-
-            /* Debug.Log("Name monster: " + monsters[1].name);
-             Debug.Log("AC monster: " + monsters[1].ArmorClass);
-             if (monsters[1].LegendaryActions != null)
-             {
-                 Debug.Log("LegendaryActions monster: " + monsters[1].LegendaryActions);
-             }*/
         }
     }
-    // Start is called before the first frame update
-    void Start()
+
+    public List<string> GetAllParametresNamesOfClass()
     {
-      //  LoadJson();
+        return typeof(HelperJSONDataCreature).GetFields()
+                            .Select(field => field.Name)
+                            .ToList();    
     }
-
-
-    void SetInfoNPC()
+    public List<object> GetAllParametresValuesOfClass(HelperJSONDataCreature creature)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return creature.GetType()
+                       .GetFields()
+                       .Select(field => field.GetValue(creature))
+                       .ToList();
     }
 }
