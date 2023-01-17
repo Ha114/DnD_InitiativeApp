@@ -5,12 +5,19 @@ using UnityEngine.UI;
 
 public class BaseSlot : MonoBehaviour
 {
-    [SerializeField] InputField _Name;
-    [SerializeField] InputField _Initiative;
-    [SerializeField] Button _deletePlayer;
+    [SerializeField] public InputField _nameInput;
+    [SerializeField] public InputField _initiativeInput;
+  //  [SerializeField] Button _deletePlayerButton;
 
-    public void DeleteThisObject()
+    public void SetData(string Name, string Iniative)
     {
-        Destroy(gameObject);
+        _nameInput.text = Name;
+        _initiativeInput.text = Iniative;
     }
+
+
+   
+
+    public void DeleteThisObject() => Destroy(gameObject);
+  
 }

@@ -287,14 +287,13 @@ GameObject:
   - component: {fileID: 3325307920816142733}
   - component: {fileID: 3325307920816142730}
   - component: {fileID: 5295647051673932858}
-  - component: {fileID: 797304811657477105}
   m_Layer: 5
   m_Name: Manual_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3325307920816142732
 RectTransform:
   m_ObjectHideFlags: 0
@@ -359,20 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ece8f4b3be6df845ac7a2439da4c3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &797304811657477105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3325307920816142735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e47d5b98b876d1459dae739e58e3d43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parentCreatureInfo: {fileID: 3325307922525646856}
-  _slotCreaturePrefab: {fileID: 2101319350802061522, guid: 1b2ead5ce1b887c4f84344b07f840e9d, type: 3}
 --- !u!1 &3325307920831234796
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +735,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 781.3492}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 15}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &3325307920852838908
 CanvasRenderer:
@@ -2996,7 +2981,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.76794434}
   m_SizeDelta: {x: 20, y: 21.5359}
   m_Pivot: {x: 0.5, y: 0.5}

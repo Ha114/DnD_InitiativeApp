@@ -9,25 +9,15 @@ public class RollIniative_Prefab : MonoBehaviour
     [SerializeField] GameObject _playerSlot;
     [SerializeField] GameObject _npcSlot;
 
-    private void Start()
-    {
-        // GameObject playerObject = Instantiate(REF.MainMenuDM_Prefab, _parentSection.position, Quaternion.identity);
-        // playerObject.transform.SetParent(_parentSection);
-    }
-
     public void AddNewNPC() => AddObject(_npcSlot);
-
-    public void AddFromManual()
-    {
-        Debug.LogError("From Manual");
-    }
 
     public void AddPlayer()
     {
         AddObject(_playerSlot);
-        Debug.Log("I add Player");
-    }    
+        //Debug.Log("I add Player");
+    }
 
+    public void BackToMainMenuButton() => SceneManager.instanceSceneManager.BackToMainMenu(2);
 
 
     private void AddObject(GameObject slot)
